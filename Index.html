@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مازن عقلان | للمحاماة والاستشارات القانونية - صنعاء</title>
+    
+    <meta name="description" content="مكتب المحامي مازن عقلان بصنعاء. تميز قانوني، نزاهة مطلقة، وحلول قانونية مبتكرة في القضايا الجنائية والتجارية.">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,700&family=Platypi:wght@300;600&family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-deep: #05080a;
+            --gold-gradient: linear-gradient(135deg, #c5a059 0%, #edd49a 100%);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-gold: #d4af37;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
+        body { 
+            background-color: var(--bg-deep); 
+            color: #e0e0e0; 
+            font-family: 'Tajawal', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 8, 10, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .logo { 
+            font-family: 'Amiri', serif; 
+            font-size: 1.8rem; 
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh; /* Reduced height to flow into founder section */
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at center, rgba(197, 160, 89, 0.03) 0%, transparent 70%);
+            position: relative;
+        }
+        .hero-text { max-width: 900px; z-index: 2; margin-top: 80px;}
+        .hero-text h1 { 
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem); 
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .hero-text p { 
+            font-size: 1.1rem; 
+            color: #aaa; 
+            max-width: 550px; 
+            margin-bottom: 35px; 
+            border-right: 3px solid var(--text-gold);
+            padding-right: 15px;
+        }
+
+        /* Platinum Button */
+        .btn-gold {
+            padding: 16px 40px;
+            background: var(--gold-gradient);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 2px;
+            display: inline-block;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2); }
+
+        /* NEW: Founder Section - The Profile */
+        .founder-section {
+            padding: 100px 10%;
+            background: #030506;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .founder-image-container {
+            position: relative;
+            border: 2px solid var(--glass-border);
+            padding: 15px;
+            background: var(--glass);
+        }
+        .founder-image-container::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            width: 100px;
+            height: 100px;
+            border-left: 3px solid var(--text-gold);
+            border-bottom: 3px solid var(--text-gold);
+            z-index: -1;
+        }
+        .founder-image-placeholder {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4; /* Vertical portrait ratio */
+            background: #111; /* Dark placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-size: 0.9rem;
+        }
+        .founder-text h2 {
+            font-family: 'Amiri', serif;
+            font-size: 2.8rem;
+            color: var(--text-gold);
+            margin-bottom: 10px;
+        }
+        .founder-text h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .founder-text p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            max-width: 650px;
+        }
+
+        /* Experience Grid */
+        .grid-section { padding: 100px 10%; }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .glass-card {
+            background: var(--glass);
+            padding: 50px 35px;
+            border: 1px solid var(--glass-border);
+            transition: 0.4s;
+        }
+        .glass-card:hover {
+            border-color: var(--text-gold);
+            background: rgba(197, 160, 89, 0.02);
+        }
+        .glass-card i { font-size: 2.2rem; color: var(--text-gold); margin-bottom: 25px; }
+        .glass-card h3 { font-family: 'Amiri', serif; font-size: 1.7rem; margin-bottom: 12px; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 10% 40px;
+            background: #020304;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+        }
+        .footer-logo { font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--text-gold); margin-bottom: 15px; }
+
+        @media (max-width: 968px) {
+            .founder-grid, .service-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.5rem; }
+            nav { padding: 15px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MAZEN AKLAN</div>
+        <div class="nav-links">
+            <a href="tel:967777307575" style="color: var(--text-gold); text-decoration: none; font-weight: bold;">777 307 575</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>صياغة العدالة، <br> حماية المستقبل.</h1>
+            <p>مكتب المحامي مازن عقلان بصنعاء. تميز قانوني يرتكز على النزاهة المطلقة والخبرة العميقة في القضاء اليمني.</p>
+            <a href="https://wa.me/967777307575" class="btn-gold">اطلب استشارة خاصة</a>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="founder-grid">
+            <div class="founder-image-container">
+                <div class="founder-image-placeholder">
+                    <span>صورة المحامي مازن عقلان</span>
+                </div>
+            </div>
+            <div class="founder-text">
+                <h2>مازن عقلان</h2>
+                <h4>المؤسس والرئيس التنفيذي</h4>
+                <p>بخبرة قانونية راسخة تمتد لسنوات في قلب النظام القضائي اليمني، يقود المحامي مازن عقلان مكتب النخبة برؤية ترتكز على تقديم حلول قانونية مبتكرة وفعالة.</p>
+                <p>تخصص في إدارة النزاعات التجارية المعقدة والقضايا الجنائية رفيعة المستوى، مما جعله مرجعاً موثوقاً للأفراد والشركات الباحثة عن الحماية والعدالة في صنعاء.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <div class="service-grid">
+            <div class="glass-card">
+                <i class="fas fa-balance-scale"></i>
+                <h3>النزاعات الجنائية</h3>
+                <p>دفاع استراتيجي صلب أمام كافة المحاكم الجنائية لضمان المحاكمة العادلة.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>قانون الشركات</h3>
+                <p>استشارات قانونية متكاملة للشركات من التأسيس حتى الاستثمار الدولي.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-landmark-dome"></i>
+                <h3>التحكيم العقاري</h3>
+                <p>تسوية النزاعات العقارية المعقدة في صنعاء بطرق مهنية وسريعة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" style="padding: 100px 10%; text-align: center;">
+        <h2 style="font-family: 'Amiri', serif; font-size: 2.5rem; color: var(--text-gold); margin-bottom: 40px;">المقر الرئيسي - صنعاء</h2>
+        <div style="width: 100%; height: 400px; background: var(--glass); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center;">
+             <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="100%" style="border:0; filter: grayscale(1) invert(1);" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <a href="https://wa.me/967777307575" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="footer-logo">مازن عقلان</div>
+        <p style="margin-bottom: 25px; opacity: 0.6;">صنعاء - الجمهورية اليمنية | هاتف: 777307575</p>
+        <p style="font-size: 0.8rem; opacity: 0.3;">© 2026 مكتب النخبة القانوني. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
